@@ -1,0 +1,21 @@
+@import 'nav.css';
+@import 'burger.css';
+
+.header {
+    height: 500px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    width: 180px;
+    height: 70px;
+}
+
+.nav_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: white;
+}
