@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#logo {
+    color: black;
+    font-size: 15px;
+}
+
+.nav-main {
+    /* background-color:green; */
+    display: block;
+    height: 100px;
+    flex: 1;
+    
+}
+.clique a{
+    color: white;
+}
+
+
+
+p {
+    color: black;
+    display: block;
+    font-size: 15px;
+}
+
+h1 {
+    color: black;
+    font-size: 15px;
+}
+
+
+
+.authentification {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+button {
+
+    /* margin-top: 15px; */
+    flex-wrap: wrap;
+
+}
+
+
+
+
+.logo {
+    width: 100px;
+    height: 70px;
+}
+
+.header {
+    height: 500px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+
+
+.nav_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+/* .link li{
+    background:red;
+    border: solid;
+    border-style: medium;
+    border-width: thick;
+    border-color: white;
+} */
+
+
+
+
+
+input {
+    margin: auto;
+    width: 250px;
+    display: flex;
+    height: 50px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.search {
+    display: flex;
+    max-width: 850px;
+    height: 100px;
+    margin: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+
+
+.titre1 {
+    margin-left: 250px;
+}
+
+/* .foo {
+    background-color: red;
+    width: 100%;
+    margin: 0 auto;
+  
+    
+    @media only screen and (min-width : 768px) {
+      width: 75%;
+      background-color: green;
+    }
+  
+    
+    @media only screen and (min-width : 992px) {
+      width: 50%;
+      background-color: pink;
+    }
+  } */
+
+.voyages {
+   
+    display: flex;
+    width: 100%;
+     height: 100%; 
+    justify-content: center;
+    align-items: center;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+   
+}
+
+
+
+img {
+    width: 320px;
+    height: 250px;
+
+
+    border-radius: 15px;
+    /* margin-top: 100px;
+    margin-left: 50px; */
+}
+
+.article {
+    width: 350px; 
+    min-width: 320px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    display: flex;
+   
+
+}
+
+/* .grid{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows:200px 200px  ;
+
+} */
+
+
+.lien {
+    margin: auto;
+
+}
+
+@media(min-width:1024px) and (max-width:1366px) {
+    .uc7{
+        display: flex;
+    }
+}
+
+
+
+@media (max-width:768px) {
+      
+      .uc7{
+          display: flex;
+      }
+
+      .article{
+        margin-left: 2rem;
+        padding-left: 2rem;
+    }  
+}
+
+@media(min-width:319px) and (max-width:568px) {
+      img{
+          width: 250px;
+      }
+
+   
+     .uc7{
+         display: flex;
+     }
+    
+
+     .article {
+        margin-left:0 ;
+        padding-left: 0;
+    }   
+
+}
+
+@media (max-width:667px){
+    .img{
+        width: 250px;
+    }
+    .article{
+        padding-left: 2rem;
+    }
+    .uc7{
+        display: flex;
+    } 
+
+}
+
+@media(min-width:768px) and (max-width:1023px) {
+    .img{
+        width: 250px;
+    }
+     /* .voyages {
+       padding-left: 0; 
+    } */
+
+      .article{
+        padding-left: 0;
+
+    }  
+    /* .header {
+        display: flex;
+        background-size: 100%;
+        width: 100%;
+        flex: 1;
+        height: auto;
+    } */ 
+   
+    .uc7{
+       display: flex;
+    }
+
+}
+
+.footer {
+    background-color:#26292e;
+    height: 600px;
+    margin: auto;
+    width: 100%;
+}
+
+
+
+.ecrit1 {
+    color: white;
+    font-size: 25px;
+    margin: auto;
+}
+
+.ecrit2 {
+    color: white;
+    font-size: medium;
+
+}
+
+.textFooter {
+    color: white;
+    font-size: medium;
+}
+
+.text2 {
+    color: white;
+    font-size: medium;
+}
+
+.text3 {
+    color: white;
+    font-size: medium;
+}
+
+.uc7 {
+
+    border-radius: 15px;
+    margin-bottom: 550px;
+
+}
+
+
+
