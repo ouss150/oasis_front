@@ -1,5 +1,4 @@
 import React from 'react'
-import clik from '../../images/img';
 
 export default function About() {
     return (

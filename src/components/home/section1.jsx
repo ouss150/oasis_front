@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import Article from './articles';
-import image1 from '../../img/ouarzazate.jpg'; 
-import image2 from '../../img/oasis1.jpg';
-import image3 from '../../img/volibilis1.jpg';
-import image4 from '../../img/tamnougalt.jpg';
+import ArticleCard from './ArticleCard';
+import image1 from '../../assets/images/1.webp';
+import image2 from '../../assets/images/2.jpg';
+import image3 from '../../assets/images/3.jpg';
+import image4 from '../../assets/images/4.jpg';
 import AuthContext from '../auth/AuthContext';
-// import lol from '../../img/'
+import axsios from "axios"
+import Axios from 'axios';
 
 
 const article = {
@@ -48,20 +49,33 @@ const articles = [article,article2, article3, article4, article4, article4];
 // import React, { Component } from 'react'
 
 export default class section1 extends Component {
+
+    state = {
+        articles : [] 
+    }
+
+    async componentDidMount(){
+        const allArticles = await Axios.get(process.env.REACT_APP_BACKEND_URL + "/article")
+        this.setState({articles : allArticles.data})
+    }
     static contextType = AuthContext;
     render() {
         return (
             <div className="voyages">
-            {
-                this.context.currentUser ? `User Connecté : ${"est connecté"}` : "Connectez-vous"
-            }
-           {
-                articles.map( article => {
-                return <Article article={article}/>
-           })
-           
-           }
-        </div>
+                {this.context.currentUser ? `User Connecté : ${this.context.currentUser.name}` : "Connectez-vous"}
+                {
+                    this.state.articles.map( article => (
+                        <div style={{
+                            display : 'flex',
+                            flexDirection : 'column',
+                            fontWeight : "800"
+                        }}>
+                            <p> {article.titre}</p>
+                            <ArticleCard articleId={article._id} img={image1}/>
+                        </div>
+                    ))
+                }
+            </div>
         )
     }
 }

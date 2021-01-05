@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import Section1 from './section1';
 import Section2 from './section2';
-import Footer from '../footer';
+// import Footer from '../footer';
 
 
 // import Sidebar from '../MenuBurger/Sidebar';
