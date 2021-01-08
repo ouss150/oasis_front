@@ -102,6 +102,17 @@ export default class AuthProvider extends Component {
     }
   };
 
+  editProfile = async (infos, clbk) => {
+    try {
+      const id = this.state.currentUser._id
+      const updatedUser = await handler.patch("/users/edit/" + id, infos);
+      this.setCurrentUser(updatedUser.data)
+      // clbk();
+    } catch (err) {
+      console.error(err)
+    }
+  };
+
   /**
    * Supprime le token d'authentification et détruit la session côté backend
    * @return {undefined}
@@ -134,6 +145,7 @@ export default class AuthProvider extends Component {
       signup: this.signup,
       signout: this.signout,
       isAdmin: this.isAdmin,
+      editProfile: this.editProfile,
       test : this.test,
       isSignedIn: this.isSignedIn()
     };

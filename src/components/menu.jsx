@@ -22,6 +22,7 @@ export default function Nav({ navType, navStatus, isNavMobileActive }) {
                 <li><NavLink  to="/">Home</NavLink></li>
                 <li><NavLink  to="/about">About</NavLink></li>
                 <li><NavLink  to="/contact">Contact</NavLink></li>
+                <li><NavLink  to="/DashboardAdmin">Admin Dash</NavLink></li>
                 {/* <li><NavLink  to="/Reservation">Reservation</NavLink></li> */}
                 <li><NavLink  to="/#">Articles</NavLink></li>
                 {ContextValue.currentUser == null ? 

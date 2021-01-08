@@ -24,10 +24,12 @@ import Accueil from './page/Accueil';
 import Footer from './components/footer';
 import Formulaire from './components/forms/formulaire';
 import Inscription from './components/Inscription/inscription';
+import { ProtectedRoutesAdmin } from './components/auth/ProtectedRoutes';
 import Reservation from './components/Reservation/reservation';
 import EditReservation from './components/Reservation/editReservation';
 import Connexion from './components/login/connexion';
 import Article from './page/Article';
+import DashboardAdmin from './page/DashboardAdmin';
 
 
 
@@ -48,7 +50,7 @@ export default class App extends Component {
 					<Header isNavMobileActive ={this.state.isNavMobileActive}burgerCallback={this.burgerCallback}/>
 					<Bloc/>
 				</div>
-
+				
 				<main className="main">
 					<Switch>
 						<Route exact path="/" component={Home} />
@@ -59,6 +61,7 @@ export default class App extends Component {
 						<Route path="/editreservation/:id" component={EditReservation}/>
 						<Route path="/Connexion" component={Connexion}/>
 						<Route path="/Article/:id" component={Article}/>
+						<ProtectedRoutesAdmin path="/DashboardAdmin" component={DashboardAdmin}/>
 					</Switch>
 				</main> 
 				<div className="App2"><Footer/></div>
