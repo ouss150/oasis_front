@@ -3,13 +3,14 @@
 
 .header {
     /* height: 500px; */
-    /* background-size: cover; */
+    background-size: 100%;
+    background-position: 0px -150px;
     /* width: 100%;
     background-repeat: no-repeat; */
 }
 
 .logo {
-    width: 180px;
+    width: 150px;
     height: 70px;
 }
 

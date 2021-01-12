@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from './menu';
-import logo from '../assets/logo/logo_oasis.png';
+import logo from '../assets/logo/logo.jpg';
 import Search from '../components/search';
 import Burger from '../components/Burger/Burger';
 import { useLocation } from 'react-router-dom';
@@ -11,7 +11,7 @@ export default function Header({ burgerCallback,isNavMobileActive}) {
     const currentUrl = useLocation()
     switch(currentUrl.pathname){
         case "/" : {
-            img = require('../assets/images/3.jpg')
+            img = require('../assets/images/pages_imgs/banniere_home.jpg')
             break;
         }
         case "/contact" : {
@@ -43,7 +43,7 @@ export default function Header({ burgerCallback,isNavMobileActive}) {
                 <Menu isNavMobileActive={isNavMobileActive}/>
                 <Burger  burgerCallback={ burgerCallback }/>
             </div>
-            {currentUrl.pathname == "/" && <Search/>}
+            {/* {currentUrl.pathname == "/" && <Search/>} */}
         </header>
     )
 }

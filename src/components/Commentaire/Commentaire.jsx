@@ -34,14 +34,14 @@ export default class Commentaire extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="commenaire_block">
                 <CommentaireForm article={this.props.article} postCallback={this.postCommentaire}/>
                 {
                     this.state.allCommentaire.map((commentaire, key) => (
-                        <>
-                            <p key={key}>{commentaire.message}  ||||||||||  ecrit par : {commentaire.auteur.name}</p>
-                            <p key={key}>{moment(commentaire.ajoute_le).fromNow()}</p>
-                        </>
+                        <div className="one_commentaire_bloc">
+                            <p key={key}> {commentaire.auteur.name} · <small>{moment(commentaire.ajoute_le).fromNow()}</small></p>
+                            <p id="commentaire_message" key={key}>{commentaire.message} </p>
+                        </div>
                     ))
                 }
             </div>

@@ -17,11 +17,13 @@ export default class CommentaireForm extends Component {
 
     render() {
         return (
-            <div>
-                Poster un commentaire :
+            <div className="commentaire_form">
+                <span className="titre_commentaire_form">Poster un commentaire</span>
+                <small className="desc_commentaire_form">Partagez votre avis avec la communauté.</small>
 
                 <form onChange={this.handleText} onSubmit={this.postComment}>
-                    <input defaultValue={this.state.message} type="text" />
+                    {/* <input defaultValue={this.state.message} type="textArea" /> */}
+                    <textarea defaultValue={this.state.message} placeholder="Ecrivez votre message ..."/>
                     <button>Poster</button>
                 </form>
             </div>

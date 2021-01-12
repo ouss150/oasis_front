@@ -4,6 +4,7 @@ import image1 from '../../assets/images/1.webp';
 import image2 from '../../assets/images/2.jpg';
 import image3 from '../../assets/images/3.jpg';
 import image4 from '../../assets/images/4.jpg';
+
 import AuthContext from '../auth/AuthContext';
 import axsios from "axios"
 import Axios from 'axios';
@@ -49,7 +50,6 @@ const articles = [article,article2, article3, article4, article4, article4];
 // import React, { Component } from 'react'
 
 export default class section1 extends Component {
-
     state = {
         articles : [] 
     }
@@ -62,16 +62,11 @@ export default class section1 extends Component {
     render() {
         return (
             <div className="voyages">
-                {this.context.currentUser ? `User Connecté : ${this.context.currentUser.name}` : "Connectez-vous"}
+                {/* {this.context.currentUser ? `User Connecté : ${this.context.currentUser.name}` : "Connectez-vous"} */}
                 {
                     this.state.articles.map( article => (
-                        <div style={{
-                            display : 'flex',
-                            flexDirection : 'column',
-                            fontWeight : "800"
-                        }}>
-                            <p> {article.titre}</p>
-                            <ArticleCard articleId={article._id} img={image1}/>
+                        <div className="article_card_wrap">
+                            <ArticleCard articleId={article._id} img={image1} articleTitre={article.titre}/>
                         </div>
                     ))
                 }
